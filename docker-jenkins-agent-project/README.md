@@ -1,0 +1,1 @@
+This is a simple Jenkins pipeline to verify if the docker configuration is working as expected.
