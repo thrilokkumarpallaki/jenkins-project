@@ -4,9 +4,6 @@ pipeline{
             image 'python:3.11.9-alpine'
         }
     }
-    environment {
-        PATH = "/usr/local/bin:${env.PATH}"
-    }
     stages {
         stage('Test') {
             steps {
