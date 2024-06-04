@@ -4,7 +4,7 @@ pipeline {
         stage ('backend') {
             agent{
                 docker {
-                    image 'python:3.11.9-alphine'
+                    image 'python:3.11.9-alpine'
                 }
             }
             steps {
@@ -14,7 +14,7 @@ pipeline {
         stage ('frontend') {
             agent {
                 docker {
-                    image 'node:lts-alphine'
+                    image 'node:lts-alpine'
                 }
             }
             steps {
