@@ -1,0 +1,25 @@
+pipeline {
+    agent None
+    stages {
+        stage ('backend') {
+            agent{
+                docker {
+                    image 'python:3.11.9-alphine'
+                }
+            }
+            steps {
+                sh 'python3 --verison'
+            }
+        }
+        stage ('frontend') {
+            agent {
+                docker {
+                    image 'node:lts-alphine'
+                }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}
